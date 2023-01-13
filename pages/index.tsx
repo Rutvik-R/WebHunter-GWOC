@@ -1,13 +1,15 @@
-import Image from 'next/image'
-// import logo from '../public/logo.jpg'
+import Header from "../components/Header";
+import Head from "next/head";
 import {Satisfy} from "@next/font/google"
 
 const satisfy = Satisfy({
   weight:'400',
   subsets:['latin'],
 })
+
 export default function Home() {
   return (
+  <>
     <div className='h-screen w-full space-y-7 bg-green-600'>
     <div className='flex  justify-center space-x-10 pt-4'>
       <a className='text-xl' href="">Home</a>
@@ -24,5 +26,17 @@ export default function Home() {
   <p className={`text-6xl ${satisfy.className} text-yellow-400`}>That.gingerart</p>
     </div>
   </div>
+   
+    <div className="w-screen h-screen">
+      <Head>
+        <title>Home | that.GingerArt</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Header />
+      <main className=""></main>
+    </div>
+  </>
   )
+   
+  );
 }
