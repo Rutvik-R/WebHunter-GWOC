@@ -1,7 +1,15 @@
+import Header from "../components/Header";
+import Head from "next/head";
+
 export default function Home() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-  )
+    <div className="w-screen h-screen">
+      <Head>
+        <title>Home | that.GingerArt</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Header />
+      <main className=""></main>
+    </div>
+  );
 }
