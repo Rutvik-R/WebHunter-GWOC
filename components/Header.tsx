@@ -2,7 +2,7 @@ import { Roboto, Nunito, Jost } from "@next/font/google";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 const saira = Roboto({ weight: "700", subsets: ["latin"] });
 const nunito = Nunito({ weight: "500", subsets: ["latin"] });
-const jost = Jost({ weight: "700", subsets: ["cyrillic"] });
+const jost = Jost({ weight: "700", subsets: ["latin"] });
 
 function Header() {
   return (

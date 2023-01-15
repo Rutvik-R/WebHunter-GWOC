@@ -103,7 +103,7 @@ function CardSlider() {
   }, []);
 
   return (
-    <div className="relative w-full md:w-1/2 h-[70vh] md:h-full p-4 flex items-center justify-center">
+    <div className="relative w-full md:w-[50vw] h-[70vh] md:h-full p-4 flex items-center justify-center md:mr-6">
       <div
         className="-mr-52 lg:-mr-60 mt-28 z-10 cursor-pointer rounded-full p-2 hover:bg-white group flex justify-center items-center"
         onClick={() => handleClick("right")}
@@ -158,11 +158,11 @@ function CardSlider() {
       </div>
 
       <div className="flex space-x-0.5 items-end absolute z-10 mt-72 md:mt-96">
-        <div className="w-6 h-1.5 bg-white rounded-lg"></div>
+        <div className="hidden w-6 h-1.5 bg-white rounded-lg"></div>
         <div className="w-16 h-2.5 bg-white rounded-md">
           <div ref={timeRef} className="rounded-md inner"></div>
         </div>
-        <div className="w-6 h-1.5 bg-white rounded-lg"></div>
+        <div className="hidden w-6 h-1.5 bg-white rounded-lg"></div>
       </div>
     </div>
   );
