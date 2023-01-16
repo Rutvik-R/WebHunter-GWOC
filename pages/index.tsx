@@ -27,7 +27,6 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-screen h-screen flex flex-col overflow-y-scroll".>
   <>
     <div className='h-screen w-full space-y-7 bg-green-600'>
     <div className='flex  justify-center space-x-10 pt-4'>
