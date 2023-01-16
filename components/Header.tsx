@@ -6,7 +6,7 @@ const jost = Jost({ weight: "700", subsets: ["latin"] });
 
 function Header() {
   return (
-    <header className="flex items-center bg-[#404EED] w-full h-16 md:px-4 lg:px-16 md:h-20">
+    <header className="flex items-center bg-transparent w-full h-16 md:px-4 lg:px-16 md:h-20">
       <div className={`p-4 flex items-center ${jost.className}`}>
         <img
           src="/Ginger_art.png"
