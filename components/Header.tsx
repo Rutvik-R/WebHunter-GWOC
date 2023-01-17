@@ -1,5 +1,6 @@
 import { Roboto, Nunito, Jost } from "@next/font/google";
 import { Bars3Icon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 const saira = Roboto({ weight: "700", subsets: ["latin"] });
 const nunito = Nunito({ weight: "500", subsets: ["latin"] });
 const jost = Jost({ weight: "700", subsets: ["latin"] });
@@ -17,9 +18,18 @@ function Header() {
       </div>
       <div className={`hidden md:block ml-auto mr-6 ${nunito.className}`}>
         <ul className="flex space-x-8 text-white">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/gallery">Gallery</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
         </ul>
       </div>
       <div className="ml-auto mr-6 cursor-pointer md:hidden">
