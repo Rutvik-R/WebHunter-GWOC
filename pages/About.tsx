@@ -1,29 +1,32 @@
 import Header from "@/components/Header";
 import Testimonial from "@/components/Testimonial";
+import { Nunito } from "@next/font/google";
+const nunito = Nunito({ weight: "800", subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <>
-    <div className="md:h-screen w-screen bg-orange-500 flex flex-col">
+    <div className="snap-y h-screen w-screen overflow-scroll">
+    <div className="md:h-screen w-screen bg-gradient-to-t from-blue-500 flex flex-col lg:snap-start">
       <Header />
       <div className="flex flex-grow items-center flex-col md:flex-row">
         <div className="lg:w-1/2 w-full h-[30rem] relative flex justify-center items-center">
           <div className="absolute bg-gray-300 p-2.5 -rotate-[20deg] -ml-40 -mt-16 lg:scale-90 scale-[0.6]">
             <img
-              src="/gwoc-about.jpg"
+              src="/gwoc-about1.jpg"
               alt=""
               className="object-contain w-64"
             />
           </div>
           <div className="absolute bg-gray-300 p-2.5 rotate-[20deg] ml-32 mt-24 scale-75 lg:scale-100">
             <img
-              src="/gwoc-about1.jpg"
+              src="/gwoc-about.jpg"
               alt=""
               className=" object-contain w-64"
             />
           </div>
         </div>
         <div className="lg:w-1/2 w-full px-4 py-8">
+          <h1 className={`text-6xl mb-9 ${nunito.className}`}>About Me</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Exercitationem autem vel suscipit laboriosam, quidem, nemo mollitia
@@ -44,6 +47,6 @@ export default function Home() {
       </div>
     </div>
     <Testimonial/>
-    </>
+    </div>
   );
 }

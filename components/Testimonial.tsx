@@ -7,7 +7,7 @@ const satisfy = Satisfy({
 })
 function Testimonial() {
   return (
-    <div className='bg-blue-500 lg:h-screen w-screen flex flex-col max-lg:items-center'>
+    <div className='bg-gradient-to-b from-blue-500 lg:h-screen w-screen flex flex-col max-lg:items-center lg:snap-start'>
     <h1 className={`text-6xl ${satisfy.className} text-center pt-10`}>Testimonials</h1>
     <div className='lg:flex-grow lg:flex justify-evenly items-center'>
       
