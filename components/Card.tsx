@@ -1,6 +1,8 @@
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRecoilState } from "recoil";
+import { modalState } from "@/atoms/modalAtom";
 
 interface types {
   img: string;
@@ -9,6 +11,7 @@ interface types {
 function Card({ img }: types) {
   const [visibility, setVisibility] = useState<boolean>(false);
   const handleModalRef = useRef<HTMLDivElement>(null);
+  const [showModal, setShowModal] = useRecoilState(modalState);
 
   const handleClose = () => {
     setVisibility(false);
@@ -19,6 +22,10 @@ function Card({ img }: types) {
     if (handleModalRef.current) {
       // handleModalRef.current.className = "";
     }
+  };
+
+  const openModal = () => {
+    setShowModal(true);
   };
 
   return (
@@ -52,7 +59,10 @@ function Card({ img }: types) {
                   specimen book.
                 </p>
                 <div className="h-20 px-6 flex items-center">
-                  <button className="bg-white p-2 rounded-xl text-sm min-w-full">
+                  <button
+                    className="bg-white p-2 rounded-xl text-sm min-w-full"
+                    onClick={openModal}
+                  >
                     Request Now
                   </button>
                 </div>
@@ -86,7 +96,10 @@ function Card({ img }: types) {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
-            <button className="bg-red-500 p-2 mx-6 mb-6 rounded-xl text-sm text-white">
+            <button
+              className="bg-red-500 p-2 mx-6 mb-6 rounded-xl text-sm text-white"
+              onClick={openModal}
+            >
               Request Now
             </button>
           </motion.div>
@@ -117,7 +130,10 @@ function Card({ img }: types) {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
-            <button className="bg-red-500 p-2 mx-6 mb-6 rounded-xl text-sm text-white">
+            <button
+              className="bg-red-500 p-2 mx-6 mb-6 rounded-xl text-sm text-white"
+              onClick={openModal}
+            >
               Request Now
             </button>
           </motion.div>
