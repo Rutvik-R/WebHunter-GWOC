@@ -1,6 +1,8 @@
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRecoilState } from "recoil";
+import { modalState } from "../atoms/modalAtom";
 
 interface types {
   img: string;
@@ -9,16 +11,22 @@ interface types {
 function Card({ img }: types) {
   const [visibility, setVisibility] = useState<boolean>(false);
   const handleModalRef = useRef<HTMLDivElement>(null);
+  const [showModal, setShowModal] = useRecoilState(modalState);
 
   const handleClose = () => {
     setVisibility(false);
   };
 
-  const handleOpen = () => {
+  const handleOpen = (e: any) => {
+    e.stopPropagation();
     setVisibility(true);
     if (handleModalRef.current) {
       // handleModalRef.current.className = "";
     }
+  };
+
+  const openModal = () => {
+    setShowModal(true);
   };
 
   return (
@@ -52,7 +60,10 @@ function Card({ img }: types) {
                   specimen book.
                 </p>
                 <div className="h-20 px-6 flex items-center">
-                  <button className="bg-white p-2 rounded-xl text-sm min-w-full">
+                  <button
+                    className="bg-white p-2 rounded-xl text-sm min-w-full text-black"
+                    onClick={openModal}
+                  >
                     Request Now
                   </button>
                 </div>
@@ -77,16 +88,23 @@ function Card({ img }: types) {
                 Category Title
               </h1>
               <div className="w-6">
-                <XMarkIcon className="w-6 h-6" onClick={handleClose} />
+                <XMarkIcon
+                  className="w-6 h-6 text-black"
+                  onClick={handleClose}
+                />
               </div>
             </div>
-            <p className="text-sm tracking-wide py-4 flex-grow mx-6">
+            <p className="text-sm tracking-wide py-4 flex-grow mx-6 text-gray-700">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
-            <button className="bg-red-500 p-2 mx-6 mb-6 rounded-xl text-sm text-white">
+            <button
+              className="bg-red-500 p-2 mx-6 mb-6 rounded-xl text-sm text-white"
+              onClick={openModal}
+              style={showModal ? { backgroundColor: "green" } : {}}
+            >
               Request Now
             </button>
           </motion.div>
@@ -108,16 +126,22 @@ function Card({ img }: types) {
                 Category Title
               </h1>
               <div className="w-6">
-                <XMarkIcon className="w-6 h-6" onClick={handleClose} />
+                <XMarkIcon
+                  className="w-6 h-6 text-black"
+                  onClick={handleClose}
+                />
               </div>
             </div>
-            <p className="text-sm tracking-wide py-4 flex-grow mx-6">
+            <p className="text-sm tracking-wide py-4 flex-grow mx-6 text-gray-700">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
-            <button className="bg-red-500 p-2 mx-6 mb-6 rounded-xl text-sm text-white">
+            <button
+              className="bg-red-500 p-2 mx-6 mb-6 rounded-xl text-sm text-white"
+              onClick={openModal}
+            >
               Request Now
             </button>
           </motion.div>
@@ -128,4 +152,3 @@ function Card({ img }: types) {
 }
 
 export default Card;
-// lg:w-[400px] lg:h-[90%] md:w-[350px] md:h-[80%] w-[80vw] h-[400px]
