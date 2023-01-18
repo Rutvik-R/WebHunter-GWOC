@@ -7,6 +7,9 @@ import LastContainer from "../components/LastContainer";
 import { Satisfy } from "@next/font/google";
 import Wavy from "@/components/wavy";
 import RequestModal from "../components/RequestModal";
+import { useRecoilState } from "recoil";
+import { menuState } from "@/atoms/modalAtom";
+import Menu from "@/components/Menu";
 
 const satisfy = Satisfy({
   weight: "400",
@@ -15,6 +18,7 @@ const satisfy = Satisfy({
 
 export default function Home() {
   const mainRef = useRef<HTMLDivElement>(null);
+  const [showMenu, setShowMenu] = useRecoilState(menuState);
 
   // useEffect(() => {
   //   if (mainRef.current && window.innerWidth > 768) {
@@ -51,6 +55,7 @@ export default function Home() {
             </div>
             <LastContainer />
           </div>
+          {showMenu && <Menu />}
         </main>
       </div>
     </>

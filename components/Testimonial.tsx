@@ -14,7 +14,7 @@ function Testimonial() {
         Testimonials
       </h1>
       <div className="lg:flex-grow lg:flex justify-evenly items-center">
-        <div className="bg-gray-300/60 lg:h-96 lg:w-72 h-96 w-72 md:h-80 md:w-96 flex flex-col items-center max-lg:mt-11 max-lg:mb-20 rounded-xl">
+        <div className="bg-gray-300/60 lg:h-96 lg:w-72 h-96 w-72 md:h-80 md:w-96 flex flex-col items-center max-lg:mt-11 max-lg:mb-20 rounded-xl shadowed">
           <img
             src="/logo.jpg"
             alt=""
@@ -27,7 +27,7 @@ function Testimonial() {
             expedita unde provident molestiae voluptates.
           </p>
         </div>
-        <div className="bg-gray-300/60 lg:h-96 lg:w-72 h-96 w-72 md:h-80 md:w-96 flex flex-col items-center max-lg:mt-11 max-lg:mb-20 rounded-xl">
+        <div className="bg-gray-300/60 lg:h-96 lg:w-72 h-96 w-72 md:h-80 md:w-96 flex flex-col items-center max-lg:mt-11 max-lg:mb-20 rounded-xl shadowed">
           <img
             src="/logo.jpg"
             alt=""
@@ -40,7 +40,7 @@ function Testimonial() {
             repudiandae dolore incidunt at?
           </p>
         </div>
-        <div className="bg-gray-300/60 lg:h-96 lg:w-72 h-96 w-72 md:h-80 md:w-96 flex flex-col items-center max-lg:mt-11 max-lg:mb-20 rounded-xl">
+        <div className="bg-gray-300/60 lg:h-96 lg:w-72 h-96 w-72 md:h-80 md:w-96 flex flex-col items-center max-lg:mt-11 max-lg:mb-20 rounded-xl shadowed">
           <img
             src="/logo.jpg"
             alt=""

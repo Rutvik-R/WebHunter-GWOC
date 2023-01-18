@@ -1,11 +1,19 @@
 import { Roboto, Nunito, Jost } from "@next/font/google";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import { menuState } from "@/atoms/modalAtom";
+import { useRecoilState } from "recoil";
 const saira = Roboto({ weight: "700", subsets: ["latin"] });
 const nunito = Nunito({ weight: "500", subsets: ["latin"] });
 const jost = Jost({ weight: "700", subsets: ["latin"] });
 
 function Header() {
+  const [showMenu, setShowMenu] = useRecoilState(menuState);
+
+  const handleOpen = () => {
+    setShowMenu(true);
+  };
+
   return (
     <header className="flex items-center bg-transparent w-full h-16 md:px-4 lg:px-16 md:h-20 z-[100000]">
       <div className={`p-4 flex items-center ${jost.className}`}>
@@ -32,7 +40,10 @@ function Header() {
           </li>
         </ul>
       </div>
-      <div className="ml-auto mr-6 cursor-pointer md:hidden">
+      <div
+        className="ml-auto mr-6 cursor-pointer md:hidden"
+        onClick={handleOpen}
+      >
         <Bars3Icon className="w-7 h-7 text-white" />
       </div>
     </header>
