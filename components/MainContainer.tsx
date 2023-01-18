@@ -1,6 +1,6 @@
 import { Nunito } from "@next/font/google";
 import CardSlider from "./CardSlider";
-const nunito = Nunito({ weight: "800", subsets: ["latin"] });
+const nunito = Nunito({ weight: ["800", "600"], subsets: ["latin"] });
 
 function MainContainer() {
   return (
@@ -12,7 +12,9 @@ function MainContainer() {
         >
           Old Made Better
         </h1>
-        <p className=" text-gray-300 text-sm md:tracking-wide leading-5 py-2 md:leading-6">
+        <p
+          className={`text-gray-200 text-sm md:tracking-wide leading-5 py-2 md:leading-6 lg:text-xl ${nunito.className} font-medium`}
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and

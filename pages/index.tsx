@@ -47,7 +47,7 @@ export default function Home() {
             <div className="py-8 md:flex justify-center items-center h-full">
               <Card img={"pic_1.jpeg"} />
               <Card img={"picture_3.jpeg"} />
-              <Card img={"pic_1.jpeg"} />
+              <Card img={"picture_2.jpeg"} />
             </div>
             <LastContainer />
           </div>
