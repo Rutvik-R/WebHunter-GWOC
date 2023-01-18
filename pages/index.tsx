@@ -40,7 +40,7 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className="w-screen flex flex-col bg-[#3586ff]">
-          <Header />
+        <div className="fixed z-[1000]"><Header /></div>
           <Wavy />
           <RequestModal />
           <div

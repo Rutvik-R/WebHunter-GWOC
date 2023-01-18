@@ -214,7 +214,7 @@ export default function App() {
           <div className="bubble"></div>
 
           <div className="h-screen w-screen overflow-y-scroll flex flex-col">
-            <Header />
+          <div className="fixed z-[1000]"><Header /></div>
             <ContactComponent />
           </div>
         </div>

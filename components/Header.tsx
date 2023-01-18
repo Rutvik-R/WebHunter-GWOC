@@ -15,7 +15,10 @@ function Header() {
   };
 
   return (
-    <header className="flex items-center bg-transparent w-full h-16 md:px-4 lg:px-16 md:h-20 z-[100000] static">
+
+  
+    <header className="flex items-center w-screen bg-black/20 h-16 md:px-4 lg:px-16 md:h-20 z-[100000]">
+
       <div className={`p-4 flex items-center ${jost.className}`}>
         <img
           src="/Ginger_art.png"

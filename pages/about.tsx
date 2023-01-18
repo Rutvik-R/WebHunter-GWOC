@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <div className="snap-y h-screen w-screen overflow-scroll bg-black">
         <div className="md:h-screen w-screen bg-gradient-to-t from-blue-500 flex flex-col lg:snap-start">
-          <Header />
+        <div className="fixed z-[1000]"><Header /></div>
           {showMenu && <Menu />}
           <div className="flex flex-grow items-center flex-col md:flex-row">
             <div className="lg:w-1/2 w-full h-[30rem] relative flex justify-center items-center">
