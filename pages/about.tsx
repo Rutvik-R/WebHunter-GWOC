@@ -35,7 +35,7 @@ export default function Home() {
               <h1 className={`text-6xl mb-9 ${nunito.className} text-white`}>
                 About Me
               </h1>
-              <p className="text-gray-300">
+              <p className="text-gray-300 text-justify">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Exercitationem autem vel suscipit laboriosam, quidem, nemo
                 mollitia ratione eum aut aperiam reprehenderit alias! Eligendi
