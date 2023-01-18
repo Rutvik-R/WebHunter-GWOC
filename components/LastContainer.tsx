@@ -1,5 +1,5 @@
 import { ChevronDoubleRightIcon } from "@heroicons/react/24/solid";
-import React from "react";
+import Link from "next/link";
 
 function LastContainer() {
   return (
@@ -9,17 +9,23 @@ function LastContainer() {
           Explore More Now
         </h1>
         <ul className="text-gray-200 md:font-medium text-sm md:text-lg p-3 md:p-6">
-          <li className="flex items-center gap-4 hover:underline cursor-pointer">
-            <ChevronDoubleRightIcon className="w-6 h-6 text-gray-200" />{" "}
-            Checkout Gallery
+          <li className="flex items-center gap-4 hover:underline cursor-pointer w-fit">
+            <Link href="/gallery" className="flex items-center">
+              <ChevronDoubleRightIcon className="w-6 h-6 text-gray-200" />{" "}
+              Checkout Gallery
+            </Link>
           </li>
-          <li className="flex items-center gap-4 hover:underline cursor-pointer">
-            <ChevronDoubleRightIcon className="w-6 h-6 text-gray-200" /> Find
-            out more about us
+          <li className="flex items-center gap-4 hover:underline cursor-pointer w-fit">
+            <Link href="/about" className="flex items-center">
+              <ChevronDoubleRightIcon className="w-6 h-6 text-gray-200" /> Find
+              out more about us
+            </Link>
           </li>
-          <li className="flex items-center gap-4 hover:underline cursor-pointer">
-            <ChevronDoubleRightIcon className="w-6 h-6 text-gray-200" /> Like
-            something? Send a request now
+          <li className="flex items-center gap-4 hover:underline cursor-pointer w-fit">
+            <Link href="/contact" className="flex items-center">
+              <ChevronDoubleRightIcon className="w-6 h-6 text-gray-200" /> Like
+              something? Send a request now
+            </Link>
           </li>
         </ul>
       </div>
