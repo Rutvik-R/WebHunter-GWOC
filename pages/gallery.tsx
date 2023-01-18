@@ -1,7 +1,11 @@
+import { menuState } from "@/atoms/modalAtom";
 import Header from "@/components/Header";
+import Menu from "@/components/Menu";
 import React from "react";
+import { useRecoilState } from "recoil";
 import styles from "../styles/Gallary.module.css";
 function Gallary() {
+  const [showMenu, setShowMenu] = useRecoilState(menuState);
   return (
     <div className="flex flex-col bg-black">
       <Header />
@@ -76,6 +80,7 @@ function Gallary() {
           </li>
         </ul>
       </div>
+      {showMenu && <Menu />}
     </div>
   );
 }
