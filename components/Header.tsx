@@ -15,7 +15,10 @@ function Header() {
   };
 
   return (
+
+  
     <header className="flex items-center w-screen bg-black/20 h-16 md:px-4 lg:px-16 md:h-20 z-[100000]">
+
       <div className={`p-4 flex items-center ${jost.className}`}>
         <img
           src="/Ginger_art.png"
@@ -26,16 +29,16 @@ function Header() {
       </div>
       <div className={`hidden md:block ml-auto mr-6 ${nunito.className}`}>
         <ul className="flex space-x-8 text-white">
-          <li>
+          <li className={`${saira.className} hover:scale-125 text-lg`}>
             <Link href="/">Home</Link>
           </li>
-          <li>
+          <li className={`${saira.className} hover:scale-125 text-lg`}>
             <Link href="/gallery">Gallery</Link>
           </li>
-          <li>
+          <li className={`${saira.className} hover:scale-125 text-lg`}>
             <Link href="/about">About</Link>
           </li>
-          <li>
+          <li className={`${saira.className} hover:scale-125 text-lg`}>
             <Link href="/contact">Contact</Link>
           </li>
         </ul>
