@@ -29,16 +29,16 @@ function Header() {
       </div>
       <div className={`hidden md:block ml-auto mr-6 ${nunito.className}`}>
         <ul className="flex space-x-8 text-white">
-          <li className={`${saira.className} hover:scale-125 text-lg`}>
+          <li className={`${saira.className} hover:scale-125 text-lg transition-all`}>
             <Link href="/">Home</Link>
           </li>
-          <li className={`${saira.className} hover:scale-125 text-lg`}>
+          <li className={`${saira.className} hover:scale-125 text-lg transition-all`}>
             <Link href="/gallery">Gallery</Link>
           </li>
-          <li className={`${saira.className} hover:scale-125 text-lg`}>
+          <li className={`${saira.className} hover:scale-125 text-lg transition-all`}>
             <Link href="/about">About</Link>
           </li>
-          <li className={`${saira.className} hover:scale-125 text-lg`}>
+          <li className={`${saira.className} hover:scale-125 text-lg transition-all`}>
             <Link href="/contact">Contact</Link>
           </li>
         </ul>

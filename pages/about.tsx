@@ -10,7 +10,7 @@ export default function Home() {
   const [showMenu, setShowMenu] = useRecoilState(menuState);
   return (
     <>
-      <div className="snap-y h-screen w-screen overflow-scroll bg-black">
+      <div className="snap-y h-screen w-screen overflow-auto bg-black scrollbar-hide">
         <div className="md:h-screen w-screen bg-gradient-to-t from-blue-500 flex flex-col lg:snap-start">
         <div className="fixed z-[1000]"><Header /></div>
           {showMenu && <Menu />}
