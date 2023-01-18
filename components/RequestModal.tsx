@@ -49,9 +49,9 @@ function RequestModal() {
     <MuiModal
       open={showModal}
       onClose={handleClose}
-      className="fixed !top-7 left-0 right-0 z-50 mx-auto w-full max-w-5xl overflow-hidden overflow-y-scroll rounded-md scrollbar-hide"
+      className="fixed !top-7 left-0 right-0 z-50 mx-auto w-full max-w-5xl  overflow-y-scroll rounded-md scrollbar-hide overflow-auto"
     >
-      <div className="h-full bg-white text-black p-3 px-5 overflow-y-scroll">
+      <div className="h-full bg-white text-black p-3 px-5 overflow-y-scroll scrollbar-hide overflow-auto">
         <div className="flex items-center border-b-2 border-gray-200 pb-5 pt-2">
           <div className={`text-md ${saira.className}`}>Send a request</div>
           <div
