@@ -20,10 +20,10 @@ function Gallary() {
   };
   return (
     <>
+      <div className="fixed z-[1000]">
+        <Header />
+      </div>
       <div className="container1 overflow-hidden w-screen h-screen">
-        <div className="fixed z-[1000]">
-          <Header />
-        </div>
         <div className="bottom_particles w-screen overflow-hidden">
           <div className="bubble"></div>
           <div className="bubble"></div>
