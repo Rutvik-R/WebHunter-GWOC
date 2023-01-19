@@ -227,7 +227,7 @@ function Gallary() {
           <div className="bubble"></div>
 
           <div className="h-screen w-screen overflow-y-scroll flex flex-col overflow-auto scrollbar-hide">
-            <div className="flex flex-col h-screen">
+            <div className="flex flex-col h-screen pt-10">
               <div className="w-screen flex-grow flex justify-center mt-[100px]">
                 <Slider {...settings} className="w-[80vw] h-[80vh]">
                   <div className="w-[80vw] h-[80vh]">
