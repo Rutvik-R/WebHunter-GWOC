@@ -21,6 +21,9 @@ function Gallary() {
   return (
     <>
       <div className="container1 overflow-hidden w-screen h-screen">
+        <div className="fixed z-[1000]">
+          <Header />
+        </div>
         <div className="bottom_particles w-screen overflow-hidden">
           <div className="bubble"></div>
           <div className="bubble"></div>
@@ -224,9 +227,6 @@ function Gallary() {
           <div className="bubble"></div>
 
           <div className="h-screen w-screen overflow-y-scroll flex flex-col overflow-auto scrollbar-hide">
-            <div className="fixed z-[1000]">
-              <Header />
-            </div>
             <div className="flex flex-col h-screen">
               <div className="w-screen flex-grow flex justify-center mt-[100px]">
                 <Slider {...settings} className="w-[80vw] h-[80vh]">
