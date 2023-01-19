@@ -217,7 +217,7 @@ export default function App() {
           <div className="bubble"></div>
 
           <div className="h-screen w-screen overflow-y-scroll flex flex-col overflow-auto scrollbar-hide">
-            <ContactComponent />
+            {false && <ContactComponent />}
           </div>
         </div>
         {showMenu && <Menu />}
