@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Nunito } from "@next/font/google";
+import Link from "next/link";
 import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 const nunito = Nunito({ subsets: ["latin"] });
@@ -57,23 +58,29 @@ function Contact() {
   return (
     <>
       <div className="flex-grow flex flex-col py-8 px-4 lg:flex-row lg:items-center justify-center items-center">
-        <div className="p-3 gap-5 flex flex-col items-center z-10">
+        <div className="max-md:hidden p-3 gap-5 flex flex-col items-center z-10">
           <div className="flex gap-5">
             <div className="w-48 h-48 shrink-0 bg-white/60 flex flex-col justify-center items-center p-3 gap-3">
               <PhoneIcon className="w-10 h-10 text-blue-600" />
-              <p className="">+1 2933 02837</p>
+              <p className="">+91 81781 99436</p>
             </div>
             <div className="w-48 h-48 shrink-0 bg-white/60 flex flex-col justify-center items-center p-3 gap-3">
               <EnvelopeIcon className="w-10 h-10 text-blue-600" />
               <p className="w-full break-words text-sm">
-                that.gingerart@gmail.com
+                nancy1292002@gmail.com
               </p>
             </div>
           </div>
           <div className="flex gap-5">
             <div className="w-48 h-48 shrink-0 bg-white/60 flex flex-col justify-center items-center p-3 gap-3">
               <AiFillInstagram className="w-10 h-10 text-blue-600" />
-              <p className="">that.gingerart</p>
+              <Link
+                href="https://instagram.com/that.gingerart?igshid-OGQ2MjdiOTE="
+                target={"_blank"}
+                className=""
+              >
+                that.gingerart
+              </Link>
             </div>
             <div className="w-48 h-48 shrink-0 bg-white/60 flex flex-col justify-center items-center p-3 gap-3">
               <AiFillLinkedin className="w-10 h-10 text-blue-600" />
@@ -83,7 +90,7 @@ function Contact() {
         </div>
 
         {/* Contact Us Part */}
-        <div className="bg-black/60 text-white flex flex-col items-center w-full py-4 rounded-md relative -mt-16 lg:mt-0 pt-20 px-6 md:max-w-[500px] lg:max-w-[600px] lg:px-20 lg:relative lg:-ml-10">
+        <div className="bg-black/60 max-md:mt-[80px] text-white flex flex-col items-center w-full py-4 rounded-md relative -mt-16 lg:mt-0 pt-20 px-6 md:max-w-[500px] lg:max-w-[600px] lg:px-20 lg:relative lg:-ml-10">
           <h1
             className={`text-4xl pb-3 uppercase font-semibold ${nunito.className}`}
           >
@@ -129,6 +136,30 @@ function Contact() {
               className={`bg-blue-500 cursor-pointer rounded-md p-3 text-xl ${nunito.className} font-semibold uppercase tracking-wide`}
             />
           </form>
+        </div>
+        <div className="md:hidden w-full bg-white mt-10 p-2 rounded-md">
+          <div className="shrink-0 bg-white/60 flex justify-center items-center p-3 gap-3">
+            <PhoneIcon className="w-6 h-6 text-blue-600" />
+            <p className="">+91 81781 99436</p>
+          </div>
+          <div className="shrink-0 bg-white/60 flex justify-center items-center p-3 gap-3">
+            <EnvelopeIcon className="w-6 h-6 text-blue-600" />
+            <p className="">nancy1292002@gmail.com</p>
+          </div>
+          <div className="shrink-0 bg-white/60 flex justify-center items-center p-3 gap-3">
+            <AiFillInstagram className="w-6 h-6 text-blue-600" />
+            <Link
+              className=""
+              href="https://instagram.com/that.gingerart?igshid-OGQ2MjdiOTE="
+              target={"_blank"}
+            >
+              that.gingerart
+            </Link>
+          </div>
+          <div className="shrink-0 bg-white/60 flex justify-center items-center p-3 gap-3">
+            <AiFillLinkedin className="w-6 h-6 text-blue-600" />
+            <p className="">that.gingerart</p>
+          </div>
         </div>
       </div>
     </>
