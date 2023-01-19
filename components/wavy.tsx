@@ -51,7 +51,7 @@ export default function Wavy() {
             alt="comma"
             className="w-[30px] h-[20px]"
           />
-          <p className={`lg:text-5xl md:text-4xl text-xl  ${saira.className}`}>
+          <p className={`lg:text-5xl md:text-4xl text-md  ${saira.className}`}>
             Not just painting clothes, styling them
           </p>
           <img
