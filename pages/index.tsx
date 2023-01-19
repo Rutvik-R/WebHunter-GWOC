@@ -34,18 +34,18 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-screen h-screen">
+      <div className="w-screen h-screen scrollbar-hide">
         <Head>
           <title>Home | that.GingerArt</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <main className="w-screen flex flex-col bg-[#3586ff]">
-          <Header />
+        <main className="w-screen flex flex-col bg-[#3586ff] overflow-auto scrollbar-hide">
+        <div className="fixed z-[1000]"><Header /></div>
           <Wavy />
           <RequestModal />
           <div
             ref={mainRef}
-            className="scroll-smooth md:h-screen md:snap-mandatory flex flex-col md:flex-row overflow-x-scroll flex-grow md:items-center bg-[#3586ff]"
+            className="overflow-auto scrollbar-hide md:h-screen md:snap-mandatory flex flex-col md:flex-row overflow-x-scroll flex-grow md:items-center bg-[#3586ff]"
           >
             <MainContainer />
             <div className="py-8 md:flex justify-center items-center h-full">

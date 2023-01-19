@@ -9,37 +9,266 @@ import Slider from "react-slick";
 
 function Gallary() {
   const [showMenu, setShowMenu] = useRecoilState(menuState);
-
-  const settings = {
-    dots: true,
+  var settings = {
+    dots: false,
+    arrows: false,
     infinite: true,
-    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-
   return (
-    <div className="flex flex-col h-screen bg-blue-500">
-      <Header />
-      <div className="h-screen w-full border-2 border-red-500">
-        <Slider {...settings} className="w-full h-full">
-          <div
-            className="w-full h-full"
-            style={{ backgroundImage: "url(/gwoc-gallary1.jpg)" }}
-          ></div>
-          <div className="">
-            <img alt={"image1"} src={"/gwoc-gallary1.jpg"} className="" />
+    <>
+      <div className="container1 overflow-hidden w-screen h-screen">
+        <div className="bottom_particles w-screen overflow-hidden">
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+          <div className="bubble"></div>
+
+          <div className="h-screen w-screen overflow-y-scroll flex flex-col overflow-auto scrollbar-hide">
+            <div className="fixed z-[1000]">
+              <Header />
+            </div>
+            <div className="flex flex-col h-screen">
+              <div className="w-screen flex-grow flex justify-center mt-[100px]">
+                <Slider {...settings} className="w-[80vw] h-[80vh]">
+                  <div className="w-[80vw] h-[80vh]">
+                    <div
+                      className="w-full h-full bg-no-repeat bg-cover bg-center"
+                      style={{ backgroundImage: "url(/gwoc-gallary1.jpg)" }}
+                    />
+                  </div>
+                  <div className="w-[80vw] h-[80vh]">
+                    <div
+                      className="w-full h-full bg-no-repeat bg-cover bg-center"
+                      style={{ backgroundImage: "url(/gwoc-gallary2.jpg)" }}
+                    />
+                  </div>
+                  <div className="w-[80vw] h-[80vh]">
+                    <div
+                      className="w-full h-full bg-no-repeat bg-cover bg-center"
+                      style={{ backgroundImage: "url(/gwoc-gallary3.jpg)" }}
+                    />
+                  </div>
+                  <div className="w-[80vw] h-[80vh]">
+                    <div
+                      className="w-full h-full bg-no-repeat bg-cover bg-center"
+                      style={{ backgroundImage: "url(/gwoc-gallary4.jpg)" }}
+                    />
+                  </div>
+                  <div className="w-[80vw] h-[80vh]">
+                    <div
+                      className="w-full h-full bg-no-repeat bg-cover bg-center"
+                      style={{ backgroundImage: "url(/gwoc-gallary5.jpg)" }}
+                    />
+                  </div>
+                </Slider>
+              </div>
+              {showMenu && <Menu />}
+            </div>
           </div>
-          <div className="">
-            <img alt={"image1"} src={"/gwoc-gallary1.jpg"} className="" />
-          </div>
-          <div className="">
-            <img alt={"image1"} src={"/gwoc-gallary1.jpg"} className="" />
-          </div>
-        </Slider>
+        </div>
+        {showMenu && <Menu />}
       </div>
-      {showMenu && <Menu />}
-    </div>
+    </>
   );
 }
 

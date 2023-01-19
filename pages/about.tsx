@@ -10,9 +10,9 @@ export default function Home() {
   const [showMenu, setShowMenu] = useRecoilState(menuState);
   return (
     <>
-      <div className="snap-y h-screen w-screen overflow-scroll bg-black">
+      <div className="snap-y h-screen w-screen overflow-auto bg-black scrollbar-hide">
         <div className="md:h-screen w-screen bg-gradient-to-t from-blue-500 flex flex-col lg:snap-start">
-          <Header />
+        <div className="fixed z-[1000]"><Header /></div>
           {showMenu && <Menu />}
           <div className="flex flex-grow items-center flex-col md:flex-row">
             <div className="lg:w-1/2 w-full h-[30rem] relative flex justify-center items-center">
@@ -35,7 +35,7 @@ export default function Home() {
               <h1 className={`text-6xl mb-9 ${nunito.className} text-white`}>
                 About Me
               </h1>
-              <p className="text-gray-300">
+              <p className="text-gray-300 text-justify">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Exercitationem autem vel suscipit laboriosam, quidem, nemo
                 mollitia ratione eum aut aperiam reprehenderit alias! Eligendi
